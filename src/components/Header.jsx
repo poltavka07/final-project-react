@@ -23,13 +23,11 @@ function Header() {
       <div>
         <Outlet />
       </div>
-      <h1
+      <footer
         style={{
-          backgroundColor: "red",
+          marginTop: "100px",
         }}
-      >
-        footer
-      </h1>
+      ></footer>
     </>
   );
 }

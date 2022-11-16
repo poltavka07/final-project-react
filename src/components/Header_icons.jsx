@@ -1,23 +1,61 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const IconHeart = () => {
-  return (
-    <svg
-      className="header_icon"
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      fill="none"
-    >
-      <path
-        stroke="#E6E5E8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="1.6"
-        d="M17.367 3.842a4.583 4.583 0 0 0-6.483 0L10 4.725l-.883-.883a4.584 4.584 0 1 0-6.483 6.483l.883.883L10 17.692l6.484-6.484.883-.883a4.585 4.585 0 0 0 0-6.483v0Z"
-      />
-    </svg>
-  );
+//import { useState } from "react";
+const IconHeart = ({ myCl, setLike, like }) => {
+  if (myCl === "product_icon")
+    return (
+      <svg
+        onClick={() => {
+          if (like) {
+            console.log(myCl);
+            setLike(false);
+          } else {
+            setLike(true);
+            console.log(myCl);
+          }
+        }}
+        style={{
+          fill: like ? "#32313A" : "none",
+          stroke: like ? "#32313A" : "#6e6d74",
+        }}
+        className={myCl}
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        //fill="none"
+        fill="currentColor"
+      >
+        <path
+          // stroke="#E6E5E8"
+          // stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.6"
+          d="M17.367 3.842a4.583 4.583 0 0 0-6.483 0L10 4.725l-.883-.883a4.584 4.584 0 1 0-6.483 6.483l.883.883L10 17.692l6.484-6.484.883-.883a4.585 4.585 0 0 0 0-6.483v0Z"
+        />
+      </svg>
+    );
+  else {
+    return (
+      <svg
+        className={myCl}
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="none"
+        //fill="currentColor"
+      >
+        <path
+          // stroke="#E6E5E8"
+          // stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.6"
+          d="M17.367 3.842a4.583 4.583 0 0 0-6.483 0L10 4.725l-.883-.883a4.584 4.584 0 1 0-6.483 6.483l.883.883L10 17.692l6.484-6.484.883-.883a4.585 4.585 0 0 0 0-6.483v0Z"
+        />
+      </svg>
+    );
+  }
 };
 
 const IconUser = () => {
@@ -68,9 +106,10 @@ const IconBag = () => {
 };
 
 const Icons = () => {
+  //const [like, setLike] = useState(false);
   return (
     <>
-      <IconHeart />
+      <IconHeart myCl={"header_icon"} />
       <IconUser />
       <Link to="/ShoppingBagPage">
         <IconBag />
@@ -80,3 +119,4 @@ const Icons = () => {
 };
 
 export default Icons;
+export { IconHeart };

@@ -1,8 +1,29 @@
 //import bg from "./img/bg/girl_bg_pink.webp";
 
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap");
+
 * {
   padding: 0;
+  margin: 0;
+  // font-family: "Open Sans", sans-serif;
+  // font-style: normal;
+  //font-weight: 400;
+  // font-size: 14px;
   // box-sizing: border-box;
+}
+h1,
+h2,
+h3 {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+}
+p,
+span,
+a {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
 }
 
 .header {
@@ -10,6 +31,7 @@
   background: #32313a;
   &_icon {
     padding: 10px;
+    stroke: #e6e5e8;
   }
   &_border {
     border-bottom: 1px solid #e6e5e8;
@@ -31,6 +53,13 @@
   padding: 16px 0 17px;
   // list-style-type: none;
   &__link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #32313a;
+    //  font-family: 'Open Sans';
+
     padding-right: 32px;
     text-decoration: none;
   }
@@ -40,6 +69,11 @@
     display: inline-block;
   }
   &__search {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+    color: #32313a;
     text-decoration: none;
     position: relative;
     // right: 10px;
@@ -120,17 +154,81 @@
 .prodCardsNav {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  //align-items: flex-end;
   text-align: left;
   margin-top: 15px;
+
   &__item {
-    width: calc(25% - 25px);
+    width: calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    // text-decoration: none;
+    position: relative;
+  }
+  &__legend {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
   }
+  &__img {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.product_icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  fill: none;
+  stroke: #6e6d74;
+  padding: 5px 4px 3px 4px;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
 .miniProd {
   margin: 100px;
 }
+
+.exclusive {
+  width: calc(50% - 125px);
+  //font-family: "Merriweather", serif;
+
+  &__text {
+    line-height: 22px;
+    color: #6e6d74;
+    margin: 15px 0 30px;
+  }
+
+  &__img {
+    width: 50%;
+  }
+  &__link {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+
+    text-decoration: none;
+    background-color: #32313a;
+    color: white;
+    padding: 10px 30px;
+  }
+}
+.baner {
+  display: block;
+  margin: 170px auto 100px;
+}
+.brend__link {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #32313a;
+}
+// footer {
+//   margin-top: 100px;
+// }

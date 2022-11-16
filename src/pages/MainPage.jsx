@@ -3,6 +3,9 @@ import CategoriesCards from "../components/Categories_cards";
 import ProductsCards from "../components/Product_cards";
 import bp1 from "../img/bg/bigpic1.webp";
 import bp2 from "../img/bg/bigpic2.webp";
+import Exclusive from "../components/Exclusive";
+import bp3 from "../img/bg/bigpic3_blue.webp";
+import BrendBlock from "../components/BrendBlock";
 // import { Link } from "react-router-dom";
 
 const MainPage = () => {
@@ -23,6 +26,9 @@ const MainPage = () => {
         <h2 className="container">Our picks for you</h2>
         <ProductsCards />
       </div>
+      <Exclusive />
+      <img className="baner" src={bp3} alt="girl" />
+      <BrendBlock />
     </>
   );
 };
