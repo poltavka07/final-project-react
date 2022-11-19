@@ -2,10 +2,9 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IconHeart } from "./Header_icons";
-import Glider from "react-glider";
-import "glider-js/glider.min.css";
-import { Next, Prev } from "../components/icons";
-//слайдер с помощью глайдЕРА
+import { Glide, GlideProps } from "react-glide";
+import "react-glide/lib/reactGlide.css";
+//слайдер с помощью глайдА
 
 const ProdCard = ({ id, value }) => {
   const [like, setLike] = useState(false);
@@ -34,31 +33,26 @@ const ProdCard = ({ id, value }) => {
     </>
   );
 };
-const ProductsCards = ({ title, data, a, b }) => {
+const ProductsCards2 = ({ title, data, a, b }) => {
   // const [hover, setHover] = useState();
+  const props: GlideProps = {
+    height: 600,
+    width: 1400,
+    // autoPlay: true,
+    // autoPlaySpeed: 2000,
+    onSlideChange: () => console.log("slide changed"),
+    infinite: false,
+    dots: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+  };
 
   return (
     <>
       <div className="miniProd">
-        <div>
-          <h2 className="container">
-            {title}
-            <div className="sliderBtn">
-              {/* <button>{<Prev />}</button> */}
-              <Prev />
-              <Next />
-            </div>
-          </h2>
-        </div>
-
+        <h2 className="container">{title}</h2>
         <div className="prodCardsNav container">
-          <Glider
-            className="glider-container "
-            draggable
-            hasArrows
-            slidesToShow={4}
-            slidesToScroll={1}
-          >
+          <Glide {...props}>
             {data.slice(a, b).map((value, index) => (
               <ProdCard
                 value={value}
@@ -67,11 +61,11 @@ const ProductsCards = ({ title, data, a, b }) => {
                 key={index}
               ></ProdCard>
             ))}
-          </Glider>
+          </Glide>
         </div>
       </div>
     </>
   );
 };
-export default ProductsCards;
+export default ProductsCards2;
 export { ProdCard };

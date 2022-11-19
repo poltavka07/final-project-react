@@ -122,10 +122,6 @@ a {
   min-height: 700px;
   // position: relative;
 }
-// -webkit-background-size: cover;
-// -moz-background-size: cover;
-// -o-background-size: cover;
-// background-size: cover;
 
 .catCardsNav {
   display: flex;
@@ -157,6 +153,7 @@ a {
   //align-items: flex-end;
   text-align: left;
   margin-top: 15px;
+  flex-wrap: wrap;
 
   &__item {
     width: calc(25% - 20px);
@@ -165,16 +162,25 @@ a {
     justify-content: space-between;
     // text-decoration: none;
     position: relative;
+    margin: 0 15px;
   }
   &__legend {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
+    color: #32313a;
+    font-size: 14px;
+    line-height: 18px;
   }
   &__img {
     width: 100%;
     position: relative;
+  }
+  &__text {
+    font-size: 13px;
+    line-height: 16px;
+    color: #56555d;
   }
 }
 
@@ -189,6 +195,9 @@ a {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  &:hover {
+    background-color: lightpink;
+  }
 }
 .miniProd {
   margin: 100px;

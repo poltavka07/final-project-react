@@ -6,13 +6,7 @@ const IconHeart = ({ myCl, setLike, like }) => {
     return (
       <svg
         onClick={() => {
-          if (like) {
-            console.log(myCl);
-            setLike(false);
-          } else {
-            setLike(true);
-            console.log(myCl);
-          }
+          like ? setLike(false) : setLike(true);
         }}
         style={{
           fill: like ? "#32313A" : "none",
@@ -23,7 +17,7 @@ const IconHeart = ({ myCl, setLike, like }) => {
         width="20"
         height="20"
         //fill="none"
-        fill="currentColor"
+        fill="current"
       >
         <path
           // stroke="#E6E5E8"

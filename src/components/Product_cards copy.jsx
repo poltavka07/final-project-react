@@ -2,13 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IconHeart } from "./Header_icons";
-import Glider from "react-glider";
-import "glider-js/glider.min.css";
-import { Next, Prev } from "../components/icons";
-//слайдер с помощью глайдЕРА
+//без слайдера
 
 const ProdCard = ({ id, value }) => {
   const [like, setLike] = useState(false);
+  console.log(value.src);
 
   return (
     <>
@@ -40,34 +38,16 @@ const ProductsCards = ({ title, data, a, b }) => {
   return (
     <>
       <div className="miniProd">
-        <div>
-          <h2 className="container">
-            {title}
-            <div className="sliderBtn">
-              {/* <button>{<Prev />}</button> */}
-              <Prev />
-              <Next />
-            </div>
-          </h2>
-        </div>
-
+        <h2 className="container">{title}</h2>
         <div className="prodCardsNav container">
-          <Glider
-            className="glider-container "
-            draggable
-            hasArrows
-            slidesToShow={4}
-            slidesToScroll={1}
-          >
-            {data.slice(a, b).map((value, index) => (
-              <ProdCard
-                value={value}
-                id={index}
-                // setHover={setHover}
-                key={index}
-              ></ProdCard>
-            ))}
-          </Glider>
+          {data.slice(a, b).map((value, index) => (
+            <ProdCard
+              value={value}
+              id={index}
+              // setHover={setHover}
+              key={index}
+            ></ProdCard>
+          ))}
         </div>
       </div>
     </>
