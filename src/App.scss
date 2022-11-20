@@ -36,6 +36,13 @@ a {
   &_border {
     border-bottom: 1px solid #e6e5e8;
   }
+  &_logo {
+    color: #fff;
+    &__black {
+      margin: 18px 0;
+      color: #32313a;
+    }
+  }
 }
 
 .container {
@@ -238,6 +245,59 @@ a {
   line-height: 24px;
   color: #32313a;
 }
-// footer {
-//   margin-top: 100px;
-// }
+footer {
+  margin-top: 100px;
+
+  padding: 60px 0 60px;
+  background-color: #f7f7f9;
+  // background-color: yellow;
+  color: #6e6d74;
+}
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #6e6d74;
+    margin-top: 20px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #32313a;
+  }
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  line-height: 22px;
+  &__icons {
+    margin-top: 40px;
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__form {
+    margin-top: 24px;
+  }
+  &__input {
+    padding: 10px;
+    border: none;
+  }
+  &__btn {
+    padding: 10px 20px;
+    background-color: #32313a;
+    color: white;
+    border: none;
+  }
+}
+.copy {
+  color: #86858b;
+}

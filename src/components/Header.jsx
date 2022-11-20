@@ -3,6 +3,7 @@ import Logo from "./Header_logo";
 import Icons from "./Header_icons";
 import HeaderNav from "./Header_Nav";
 import { Link, Outlet } from "react-router-dom";
+import { Footer, SubFooter } from "./Footer";
 
 function Header() {
   return (
@@ -11,7 +12,7 @@ function Header() {
         <header className="header">
           <div className="container">
             <Link to="/">
-              <Logo />
+              <Logo myCl={"header_logo"} />
             </Link>
             <div>
               <Icons />
@@ -23,11 +24,10 @@ function Header() {
       <div>
         <Outlet />
       </div>
-      <footer
-        style={{
-          marginTop: "100px",
-        }}
-      ></footer>
+      <footer>
+        <Footer />
+      </footer>
+      <SubFooter />
     </>
   );
 }
