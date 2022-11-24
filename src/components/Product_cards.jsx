@@ -1,8 +1,9 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { IconHeart } from "./Header_icons";
 import Glider from "react-glider";
+
 import "glider-js/glider.min.css";
 import { Next, Prev } from "../components/icons";
 //слайдер с помощью глайдЕРА
@@ -35,6 +36,20 @@ const ProdCard = ({ id, value }) => {
   );
 };
 const ProductsCards = ({ title, data, a, b }) => {
+  const leftArrowEl = useRef(null);
+  const rightArrowEl = useRef(null);
+  const [isReady, setIsReady] = useState(false);
+
+  const leftArrowCallbackRef = useCallback((element) => {
+    leftArrowEl.current = element;
+    setIsReady(Boolean(leftArrowEl.current && rightArrowEl.current));
+  }, []);
+
+  const rightArrowCallbackRef = useCallback((element) => {
+    rightArrowEl.current = element;
+    setIsReady(Boolean(leftArrowEl.current && rightArrowEl.current));
+  }, []);
+
   // const [hover, setHover] = useState();
 
   return (
@@ -44,30 +59,50 @@ const ProductsCards = ({ title, data, a, b }) => {
           <h2 className="container">
             {title}
             <div className="sliderBtn">
-              {/* <button>{<Prev />}</button> */}
-              <Prev />
-              <Next />
+              <button
+                ref={leftArrowCallbackRef}
+                type="button"
+                aria-label="Previous"
+                className="custom-arrow"
+              >
+                {<Prev />}
+              </button>
+              <button
+                ref={rightArrowCallbackRef}
+                type="button"
+                aria-label="Next"
+                className="custom-arrow"
+              >
+                {<Next />}
+              </button>
             </div>
           </h2>
         </div>
 
         <div className="prodCardsNav container">
-          <Glider
-            className="glider-container "
-            draggable
-            hasArrows
-            slidesToShow={4}
-            slidesToScroll={1}
-          >
-            {data.slice(a, b).map((value, index) => (
-              <ProdCard
-                value={value}
-                id={index}
-                // setHover={setHover}
-                key={index}
-              ></ProdCard>
-            ))}
-          </Glider>
+          {isReady && (
+            <Glider
+              className="glider-container "
+              draggable
+              // rewind={true}
+              hasArrows
+              arrows={{
+                prev: leftArrowEl.current,
+                next: rightArrowEl.current,
+              }}
+              slidesToShow={4}
+              slidesToScroll={1}
+            >
+              {data.slice(a, b).map((value, index) => (
+                <ProdCard
+                  value={value}
+                  id={index}
+                  // setHover={setHover}
+                  key={index}
+                ></ProdCard>
+              ))}
+            </Glider>
+          )}
         </div>
       </div>
     </>

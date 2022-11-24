@@ -301,3 +301,11 @@ footer {
 .copy {
   color: #86858b;
 }
+
+.custom-arrow {
+  background-color: #fff;
+  border: none;
+}
+.custom-arrow.disabled {
+  color: #bfbec6;
+}

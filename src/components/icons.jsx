@@ -2,7 +2,6 @@ const Next = () => {
   return (
     <svg
       style={{ marginLeft: "20px" }}
-      // className="glider-next"
       xmlns="http://www.w3.org/2000/svg"
       width="27"
       height="16"
@@ -29,7 +28,7 @@ const Prev = () => {
       fill="none"
     >
       <path
-        stroke="#B5B5BC"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

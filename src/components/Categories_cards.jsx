@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+//import { useState } from "react";
 import { Link } from "react-router-dom";
 // import pic0 from "../img/categories/1.webp";
 // import pic1 from "../img/categories/2.webp";
@@ -8,7 +8,11 @@ import { Link } from "react-router-dom";
 // import pic4 from "../img/categories/5.webp";
 // import pic5 from "../img/categories/6.webp";
 
-const CatCard = ({ id, setHover, value }) => {
+const CatCard = ({
+  id,
+  // setHover,
+  value,
+}) => {
   // let picName = "pic".concat(id);
 
   return (
@@ -19,7 +23,7 @@ const CatCard = ({ id, setHover, value }) => {
   );
 };
 const CategoriesCards = () => {
-  const [hover, setHover] = useState();
+  // const [hover, setHover] = useState();
 
   return (
     <>
@@ -29,7 +33,7 @@ const CategoriesCards = () => {
             <CatCard
               value={value}
               id={index}
-              setHover={setHover}
+              //setHover={setHover}
               key={index}
             ></CatCard>
           )
