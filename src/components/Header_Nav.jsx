@@ -8,7 +8,7 @@ const HeaderNav = () => {
         <Link className="headerNav__link" to="/NewInPage">
           New in
         </Link>
-        <Link className="headerNav__link" to="/">
+        <Link className="headerNav__link" to="/ClothingPage">
           Clothing
         </Link>
         <Link className="headerNav__link" to="/">
