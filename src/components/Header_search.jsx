@@ -1,27 +1,42 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { useState } from "react";
+
 const HeaderSearch = () => {
+  const [searchResult, setSearchResult] = useState([]);
+  const { clothing } = useSelector((store) => store.catalog);
+
+  const searchDis = (e) => {
+    const filterData = clothing.filter((item) => {
+      if (e.target.value === "") {
+        return null;
+      }
+      if (item.title.toLowerCase().includes(e.target.value.toLowerCase())) {
+        return item;
+      }
+    });
+    if (filterData.length === 0 && e.target.value.length !== 0) {
+      setSearchResult([{ title: "Not found" }]);
+    } else {
+      setSearchResult(filterData);
+    }
+  };
+
   return (
-    <div>
-      <svg
-        style={{
-          marginBottom: "-5",
-          marginRight: "10",
-        }}
-        //className="icon_search"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        fill="none"
-      >
-        <path
-          stroke="#32313A"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="1.5"
-          d="M7.5 14a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11ZM18 18l-6-5"
-        />
-      </svg>
-      <span className="headerNav__search">Search for...</span>
+    <div className="headerNav__srch">
+      <input
+        className="headerNav__search"
+        type="text"
+        placeholder="Search for..."
+        onChange={searchDis}
+      />
+      {!!searchResult.length && (
+        <div className="headerNav__search__res">
+          {searchResult.map(({ title }) => {
+            return <p>{title}</p>;
+          })}
+        </div>
+      )}
     </div>
   );
 };

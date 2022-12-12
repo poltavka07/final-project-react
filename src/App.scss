@@ -16,6 +16,7 @@ h2,
 h3 {
   font-family: "Merriweather", serif;
   font-weight: 700;
+  color: #32313a;
 }
 p,
 span,
@@ -75,24 +76,47 @@ a {
     padding-left: 8px;
     display: inline-block;
   }
+  &__srch {
+    position: relative;
+    color: #32313a;
+  }
   &__search {
-    font-style: normal;
+    font-family: inherit;
+    padding: 10px 5px 10px 35px;
+    border: none;
     font-weight: 600;
     font-size: 13px;
     line-height: 16px;
     color: #32313a;
-    text-decoration: none;
-    position: relative;
-    // right: 10px;
+    width: 80px;
+    height: 25px;
+    //position: relative;
+    &__res {
+      position: absolute;
+      top: 100%;
+      left: 0px;
+      width: 200px;
+      p {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
   }
-  &__search::before {
-    content: url(./img/icon_search.svg);
-    //margin-bottom: -5px;
+  &__srch::before {
+    content: "";
+    background: url(./img/icon_search.svg);
+    background-size: cover;
+    //content: url(./img/icon_search.svg);
     position: absolute;
-    left: -30px;
-    top: 2px;
-    // padding-right: 10px;
-    // display: inline-block;
+    top: 0;
+    bottom: 0;
+    // right: 0;
+    margin: auto 0;
+    width: 25px;
+    height: 25px;
+    left: 5px;
+    // top: 8px;
   }
 }
 
@@ -183,6 +207,7 @@ a {
   &__img {
     width: 100%;
     position: relative;
+    //object-fit: fill;
   }
   &__text {
     font-size: 13px;

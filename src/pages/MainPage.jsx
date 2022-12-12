@@ -14,12 +14,12 @@ const MainPage = () => {
     <>
       <Promocode />
       <CategoriesCards />
-      <ProductsCards title={"New Arrivals"} data={product} a={0} b={9} />
+      <ProductsCards title={"New Arrivals"} data={product} a={0} b={6} />
       <div className="container">
         <img src={bp1} alt="girl" />
         <img src={bp2} alt="girl" />
       </div>
-      <ProductsCards title={"Our picks for you"} data={product} a={0} b={9} />
+      <ProductsCards title={"Our picks for you"} data={product} a={2} b={9} />
       <Exclusive />
       <img className="baner" src={bp3} alt="girl" />
       <BrendBlock />

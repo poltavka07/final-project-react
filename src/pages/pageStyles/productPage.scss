@@ -1,0 +1,27 @@
+.prod {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__img {
+    width: 60%;
+  }
+  &__legend {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    align-items: flex-start;
+    font-size: 14px;
+    color: #6e6d74;
+  }
+  &__price_main {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    color: #da2e3f;
+  }
+  &__price_old {
+    padding-left: 10px;
+    text-decoration: line-through;
+    color: #9f9ea3;
+  }
+}

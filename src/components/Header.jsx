@@ -21,9 +21,7 @@ function Header() {
         </header>
         <HeaderNav />
       </div>
-      <div>
-        <Outlet />
-      </div>
+      <Outlet />
       <footer>
         <Footer />
       </footer>

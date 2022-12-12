@@ -8,7 +8,10 @@ const CatalogProdCard = ({ id, value }) => {
 
   return (
     <>
-      <div className="prodCardsNav__item catalog">
+      <div
+        style={{ justifyContent: "start", padding: "20px" }}
+        className="prodCardsNav__item catalog"
+      >
         <Link to="/ProductPage">
           <img
             src={value.image}
@@ -16,7 +19,7 @@ const CatalogProdCard = ({ id, value }) => {
             alt={value.category}
           />
         </Link>
-        <IconHeart myCl={"product_icon"} setLike={setLike} like={like} />{" "}
+        <IconHeart myCl={"product_icon"} setLike={setLike} like={like} />
         <Link className="prodCardsNav__legend" to="/ProductPage">
           <h3 style={{ marginTop: "15px" }}>{value.title}</h3>
           <span className="prodCardsNav__text" style={{ marginTop: "10px" }}>

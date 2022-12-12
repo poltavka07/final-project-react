@@ -3,7 +3,6 @@ import { useState, useRef, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { IconHeart } from "./Header_icons";
 import Glider from "react-glider";
-
 import "glider-js/glider.min.css";
 import { Next, Prev } from "../components/icons";
 //слайдер с помощью глайдЕРА

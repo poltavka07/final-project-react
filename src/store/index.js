@@ -5,7 +5,7 @@ import countReducer from "./reducers/countReducer";
 const store = configureStore({
   reducer: {
     count: countReducer,
-    clothing: clothingReducer,
+    catalog: clothingReducer,
   },
 });
 

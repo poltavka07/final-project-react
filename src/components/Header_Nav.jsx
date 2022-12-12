@@ -1,5 +1,5 @@
 import React from "react";
-//import HeaderSearch from "./Header_search";
+import HeaderSearch from "./Header_search";
 import { Link } from "react-router-dom";
 const HeaderNav = () => {
   return (
@@ -24,11 +24,7 @@ const HeaderNav = () => {
           Sale
         </Link>
       </nav>
-      <Link className="headerNav__search" to="/SearchPage">
-        Search for...
-      </Link>
-
-      {/* <HeaderSearch /> */}
+      <HeaderSearch />
     </div>
   );
 };

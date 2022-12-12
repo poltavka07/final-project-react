@@ -103,7 +103,9 @@ const Icons = () => {
   //const [like, setLike] = useState(false);
   return (
     <>
-      <IconHeart myCl={"header_icon"} />
+      <Link to="/FavoritePage">
+        <IconHeart myCl={"header_icon"} />
+      </Link>
       <IconUser />
       <Link to="/ShoppingBagPage">
         <IconBag />
