@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const HeaderSearch = () => {
   const [searchResult, setSearchResult] = useState([]);
@@ -32,8 +33,14 @@ const HeaderSearch = () => {
       />
       {!!searchResult.length && (
         <div className="headerNav__search__res">
-          {searchResult.map(({ title }) => {
-            return <p>{title}</p>;
+          {searchResult.map(({ title, id }, index) => {
+            return (
+              <Link to={`/ProductPage/${id}`}>
+                <p key={`srch_${id}`} className="headerNav__search__item">
+                  {title}
+                </p>
+              </Link>
+            );
           })}
         </div>
       )}

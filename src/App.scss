@@ -5,6 +5,7 @@
 * {
   padding: 0;
   margin: 0;
+
   // font-family: "Open Sans", sans-serif;
   // font-style: normal;
   //font-weight: 400;
@@ -233,6 +234,9 @@ a {
 }
 .miniProd {
   margin: 100px;
+  &_close {
+    margin: 50px;
+  }
 }
 .catalog {
   align-items: start;
@@ -334,7 +338,9 @@ footer {
 .custom-arrow {
   background-color: #fff;
   border: none;
+  cursor: pointer;
 }
 .custom-arrow.disabled {
   color: #bfbec6;
+  cursor: unset;
 }

@@ -12,7 +12,7 @@ const CatalogProdCard = ({ id, value }) => {
         style={{ justifyContent: "start", padding: "20px" }}
         className="prodCardsNav__item catalog"
       >
-        <Link to="/ProductPage">
+        <Link to={`/ProductPage/${value.id}`}>
           <img
             src={value.image}
             className="prodCardsNav__img"

@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import MainPage from "./pages/MainPage";
 import NewInPage from "./pages/NewInPage";
 import CategoryPage from "./pages/CategoryPage";
-import SearchPage from "./pages/SearchPage";
+//import SearchPage from "./pages/SearchPage";
 import ShoppingBagPage from "./pages/ShoppingBagPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductPage from "./pages/ProductPage";
@@ -23,9 +23,9 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/NewInPage" element={<NewInPage />} />
           <Route path="/CategoryPage" element={<CategoryPage />} />
-          <Route path="/SearchPage" element={<SearchPage />} />
+          {/* <Route path="/SearchPage" element={<SearchPage />} /> */}
           <Route path="/ShoppingBagPage" element={<ShoppingBagPage />} />
-          <Route path="/ProductPage" element={<ProductPage />} />
+          <Route path="/ProductPage/:id" element={<ProductPage />} />
           <Route path="/ClothingPage" element={<ClothingPage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />

@@ -43,7 +43,7 @@ const ClothingPage = () => {
 
   return (
     <>
-      <div className="miniProd">
+      <div className="miniProd_close">
         <div>
           <h2 className="container">
             Clothing Page

@@ -1,14 +1,17 @@
 .prod {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   &__img {
-    width: 60%;
+    padding-left: 100px;
+    width: 50%;
+    height: fit-content;
   }
   &__legend {
+    width: calc(100% - (60% + 100px));
     display: flex;
     flex-direction: column;
-    padding: 0 30px;
+    padding-left: 30px;
     align-items: flex-start;
     font-size: 14px;
     color: #6e6d74;

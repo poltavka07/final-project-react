@@ -13,12 +13,12 @@ const Star = ({ active, id, setRate, setHover, activeLight }) => {
       onMouseLeave={() => {
         setHover();
       }}
-      onDoubleClick={() => {
-        setRate();
-      }}
+      // onDoubleClick={() => {
+      //   setRate();
+      // }}
       style={{
+        cursor: "pointer",
         padding: "1px",
-        // backgroundColor: id <= active ? "blue" : null,
         color: id <= (activeLight || active) ? "#32313A" : "#E6E5E8",
       }}
     >
@@ -37,7 +37,7 @@ const Star = ({ active, id, setRate, setHover, activeLight }) => {
   );
 };
 
-const StarRating = ({ rate = 4 }) => {
+const StarRating = ({ rate = "4", vote = "139" }) => {
   const [value, setValue] = useState(rate);
   const [valueLight, setValueLight] = useState();
 
@@ -54,13 +54,13 @@ const StarRating = ({ rate = 4 }) => {
             key={index}
           ></Star>
         ))}
-        <span
+        <p
           style={{
             paddingLeft: "10px",
           }}
         >
-          4.2 (39 reviews)
-        </span>
+          {value} ({vote} reviews)
+        </p>
       </div>
     </>
   );
