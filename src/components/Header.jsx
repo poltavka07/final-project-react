@@ -8,6 +8,9 @@ import { Footer, SubFooter } from "./Footer";
 function Header() {
   return (
     <>
+      <div id="fix" className="fix">
+        fix
+      </div>
       <div className="header_border">
         <header className="header">
           <div className="container">

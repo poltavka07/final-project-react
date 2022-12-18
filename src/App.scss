@@ -56,19 +56,14 @@ a {
 }
 
 .headerNav {
-  //display: flex;
-  // justify-content: start;
-  //align-items: flex-start;
   padding: 16px 0 17px;
-  // list-style-type: none;
+
   &__link {
     font-style: normal;
     font-weight: 600;
     font-size: 13px;
     line-height: 16px;
     color: #32313a;
-    //  font-family: 'Open Sans';
-
     padding-right: 32px;
     text-decoration: none;
   }
@@ -77,57 +72,7 @@ a {
     padding-left: 8px;
     display: inline-block;
   }
-  &__srch {
-    position: relative;
-    color: #32313a;
-  }
-  &__search {
-    font-family: inherit;
-    padding: 10px 5px 10px 35px;
-    border: none;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 16px;
-    color: #32313a;
-    width: 80px;
-    height: 25px;
-    //position: relative;
-    &__res {
-      position: absolute;
-      top: 100%;
-      left: 0px;
-      width: 200px;
-      p {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-    }
-  }
-  &__srch::before {
-    content: "";
-    background: url(./img/icon_search.svg);
-    background-size: cover;
-    //content: url(./img/icon_search.svg);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    // right: 0;
-    margin: auto 0;
-    width: 25px;
-    height: 25px;
-    left: 5px;
-    // top: 8px;
-  }
 }
-
-// .icon_chevron {
-//   padding: 0 0 2px 6px;
-// }
-// .icon_search {
-//   margin-bottom: -5px;
-//   margin-right: 10px;
-// }
 
 .promocode {
   display: flex;
@@ -147,25 +92,17 @@ a {
 .hero {
   background-image: url(./img/bg/girl_bg_pink.webp);
   background-repeat: no-repeat;
-  //background-position: center;
   margin: auto;
-  // background-attachment: fixed;
   max-width: 1440px;
   min-height: 700px;
-  // position: relative;
 }
 
 .catCardsNav {
   display: flex;
-  //height: 700px;
   justify-content: center;
   align-items: flex-end;
-  // align-self: flex-start;
-  //margin: 0 auto;
   text-align: center;
 
-  // flex-direction: column;
-  //position: absolute;
   &__item {
     width: 160px;
     margin: 15px;
@@ -182,7 +119,6 @@ a {
 .prodCardsNav {
   display: flex;
   justify-content: space-between;
-  //align-items: flex-end;
   text-align: left;
   margin-top: 15px;
   flex-wrap: wrap;
@@ -192,7 +128,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    // text-decoration: none;
     position: relative;
     margin: 0 15px;
   }
@@ -343,4 +278,9 @@ footer {
 .custom-arrow.disabled {
   color: #bfbec6;
   cursor: unset;
+}
+
+.fix {
+  position: fixed;
+  display: none;
 }

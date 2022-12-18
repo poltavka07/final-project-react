@@ -37,7 +37,7 @@ const Star = ({ active, id, setRate, setHover, activeLight }) => {
   );
 };
 
-const StarRating = ({ rate = "4", vote = "139" }) => {
+const StarRating = ({ rate, vote }) => {
   const [value, setValue] = useState(rate);
   const [valueLight, setValueLight] = useState();
 
@@ -54,11 +54,7 @@ const StarRating = ({ rate = "4", vote = "139" }) => {
             key={index}
           ></Star>
         ))}
-        <p
-          style={{
-            paddingLeft: "10px",
-          }}
-        >
+        <p className="rating__text">
           {value} ({vote} reviews)
         </p>
       </div>

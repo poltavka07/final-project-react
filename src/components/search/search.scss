@@ -1,0 +1,71 @@
+.headerNav__srch {
+  position: relative;
+  color: #32313a;
+  &::before {
+    content: "";
+    background: url(../../img/icon_search.svg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 25px;
+    height: 25px;
+    left: 5px;
+  }
+}
+
+.headerNav__search {
+  font-family: inherit;
+  padding: 10px 5px 10px 35px;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: #32313a;
+  width: 80px;
+  height: 25px;
+
+  &__res {
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    width: 200px;
+    z-index: 1;
+
+    &__item {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-left: 10px;
+      background-color: #b8b6c3;
+      color: #32313a;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 28px;
+
+      &:hover,
+      &_active {
+        background-color: lightpink;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 28px;
+        padding-left: 10px;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+
+    > :last-child p,
+    > :last-child {
+      border-bottom-left-radius: 8%;
+      border-bottom-right-radius: 8%;
+    }
+    > :first-child p,
+    > :first-child {
+      border-top-left-radius: 10%;
+      border-top-right-radius: 10%;
+    }
+  }
+}

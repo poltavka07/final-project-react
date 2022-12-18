@@ -25,7 +25,7 @@ const ClothingPage = () => {
       .catch((error) => {
         dispatch(clothingLoaderFailed(error.message));
       });
-  }, []);
+  }, [dispatch]);
 
   const leftArrowEl = useRef(null);
   const rightArrowEl = useRef(null);
@@ -89,7 +89,7 @@ const ClothingPage = () => {
                   <CatalogProdCard
                     value={value}
                     id={index}
-                    key={index}
+                    key={`prod_${index}`}
                   ></CatalogProdCard>
                 ))}
             </Glider>

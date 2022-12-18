@@ -33,7 +33,7 @@ const FooterNav = ({ title, data }) => {
           <Link
             className="footerNav__link"
             to={("/" + value).replaceAll(" ", "_")}
-            key={index}
+            key={`link_${index}`}
           >
             {value}
           </Link>

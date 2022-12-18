@@ -15,6 +15,13 @@
     align-items: flex-start;
     font-size: 14px;
     color: #6e6d74;
+    &_title {
+      padding: 5px 0;
+    }
+    &_description {
+      font-weight: 600;
+      color: #32313a;
+    }
   }
   &__price_main {
     font-weight: 600;

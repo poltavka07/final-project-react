@@ -1,5 +1,5 @@
 import React from "react";
-import HeaderSearch from "./Header_search";
+import HeaderSearch from "./search/Header_search";
 import { Link } from "react-router-dom";
 const HeaderNav = () => {
   return (

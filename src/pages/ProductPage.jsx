@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import StarRating from "../components/StarRating/Stars";
-//import bprod1 from "../img/products/bprod/bprod1.webp";
 import "../pages/pageStyles/productPage.scss";
 import ColorSelector from "../components/colorSelector/ColorSelector";
 import SizeSelector from "../components/sizeSelector/SizeSelector";
@@ -15,6 +14,7 @@ const ProductPage = () => {
   const [productData, setProductData] = useState({});
   const { id } = useParams();
   useEffect(() => {
+    setLoading(true);
     axios.get(`https://fakestoreapi.com/products/${id}`).then(({ data }) => {
       setProductData(data);
       setLoading(false);
@@ -32,7 +32,7 @@ const ProductPage = () => {
         <img src={image} className="prod__img" alt={category} />
         <div className="prod__legend">
           <span>{category}</span>
-          <h1 tyle={{ padding: "5px 0" }}>{title}</h1>
+          <h1 className="prod__legend_title">{title}</h1>
           <StarRating rate={Math.round(rating?.rate)} vote={rating?.count} />
           <div style={{ padding: "30px 0" }}>
             <span className="prod__price_main">{`$${price}`}</span>
@@ -43,9 +43,7 @@ const ProductPage = () => {
           </div>
           <ColorSelector />
           <SizeSelector />
-          <span style={{ fontWeight: "600", color: "#32313A" }}>
-            Product details
-          </span>
+          <span className="prod__legend_description">Product details</span>
           <p>{description}</p>
         </div>
       </div>
