@@ -75,10 +75,20 @@ export const IconYt = () => (
 
 export const Social = () => (
   <div className="signUp__icons">
-    <IconInst />
-    <IconFb />
-    <IconTw />
-    <IconPint />
-    <IconYt />
+    <a href="https://www.instagram.com/">
+      <IconInst />
+    </a>
+    <a href="https://uk-ua.facebook.com/">
+      <IconFb />
+    </a>
+    <a href="https://twitter.com/?lang=uk">
+      <IconTw />
+    </a>
+    <a href="https://www.pinterest.ca/">
+      <IconPint />
+    </a>
+    <a href="https://www.youtube.com/">
+      <IconYt />
+    </a>
   </div>
 );

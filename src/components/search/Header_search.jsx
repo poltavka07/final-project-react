@@ -68,7 +68,9 @@ const HeaderSearch = () => {
                 onClick={closeSearch}
                 key={`srch_${id}`}
               >
-                <p className="headerNav__search__res__item">{title}</p>
+                <p className="headerNav__search__res__item" title={title}>
+                  {title}
+                </p>
               </Link>
             ) : (
               <p

@@ -20,7 +20,7 @@ const ProdCard = ({ id, value }) => {
             alt={value.describe}
           />
         </Link>
-        <IconHeart myCl={"product_icon"} setLike={setLike} like={like} />{" "}
+        <IconHeart myCl={"old_product_icon"} setLike={setLike} like={like} />{" "}
         <Link className="prodCardsNav__legend" to="/ProductPage">
           <h3 style={{ marginTop: "15px" }}>{value.brand}</h3>
           <span className="prodCardsNav__text" style={{ marginTop: "10px" }}>
@@ -48,8 +48,6 @@ const ProductsCards = ({ title, data, a, b }) => {
     rightArrowEl.current = element;
     setIsReady(Boolean(leftArrowEl.current && rightArrowEl.current));
   }, []);
-
-  // const [hover, setHover] = useState();
 
   return (
     <>
@@ -93,12 +91,7 @@ const ProductsCards = ({ title, data, a, b }) => {
               slidesToScroll={1}
             >
               {data.slice(a, b).map((value, index) => (
-                <ProdCard
-                  value={value}
-                  id={index}
-                  // setHover={setHover}
-                  key={index}
-                ></ProdCard>
+                <ProdCard value={value} id={index} key={index}></ProdCard>
               ))}
             </Glider>
           )}

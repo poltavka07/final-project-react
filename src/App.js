@@ -10,6 +10,7 @@ import ShoppingBagPage from "./pages/ShoppingBagPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductPage from "./pages/ProductPage";
 import ClothingPage from "./pages/ClothingPage";
+import FavoritePage from "./pages/FavoritePage";
 // import HeaderNav from "./components/Header_Nav";
 //import HeaderSearch from "./components/Header_search";
 // import Promocode from "./components/Promocode";
@@ -23,10 +24,10 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/NewInPage" element={<NewInPage />} />
           <Route path="/CategoryPage" element={<CategoryPage />} />
-          {/* <Route path="/SearchPage" element={<SearchPage />} /> */}
           <Route path="/ShoppingBagPage" element={<ShoppingBagPage />} />
           <Route path="/ProductPage/:id" element={<ProductPage />} />
           <Route path="/ClothingPage" element={<ClothingPage />} />
+          <Route path="/FavoritePage" element={<FavoritePage />} />
         </Route>
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

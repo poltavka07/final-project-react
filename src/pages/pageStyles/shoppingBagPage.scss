@@ -1,0 +1,21 @@
+.bag__title {
+  padding: 40px 0;
+}
+
+.bag__count {
+  margin: 0 auto;
+  display: flex;
+  width: 80px;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 16px;
+  color: #32313a;
+  &__btn {
+    background-color: #fff;
+    border: none;
+    font-size: 20px;
+    line-height: 16px;
+    color: #32313a;
+    cursor: pointer;
+  }
+}

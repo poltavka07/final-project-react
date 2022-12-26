@@ -7,7 +7,7 @@ import {
 } from "../store/actions/clothingActions";
 import { useEffect, useCallback, useRef, useState } from "react";
 import { getClothing } from "../api/clothing";
-import CatalogProdCard from "../components/catalog_Product_cards";
+import CatalogProdCard from "../components/catalogProdCards/catalog_Product_cards";
 import Loader from "../components/loader/loader";
 import Glider from "react-glider";
 import "glider-js/glider.min.css";
@@ -72,7 +72,7 @@ const ClothingPage = () => {
           {loading && <Loader />}
           {isReady && (
             <Glider
-              className="glider-container "
+              className="glider-container"
               draggable
               //rewind={true}
               //scrollLock

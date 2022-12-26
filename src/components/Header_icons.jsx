@@ -1,8 +1,40 @@
 import React from "react";
 import { Link } from "react-router-dom";
 //import { useState } from "react";
-const IconHeart = ({ myCl, setLike, like }) => {
-  if (myCl === "product_icon")
+const IconHeart = ({ myCl, setLike = "", like = "" }) => {
+  if (
+    myCl === "product_icon" ||
+    myCl === "product_icon product_icon_active"
+    // ||
+    // myCl === "product_icon_active"
+  )
+    return (
+      <svg
+        // onClick={() => {
+        //   like ? setLike(false) : setLike(true);
+        // }}
+        // style={{
+        //   fill: like ? "#32313A" : "none",
+        //   stroke: like ? "#32313A" : "#6e6d74",
+        // }}
+        className={myCl}
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        //fill="none"
+        fill="current"
+      >
+        <path
+          // stroke="#E6E5E8"
+          // stroke="currentColor"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.6"
+          d="M17.367 3.842a4.583 4.583 0 0 0-6.483 0L10 4.725l-.883-.883a4.584 4.584 0 1 0-6.483 6.483l.883.883L10 17.692l6.484-6.484.883-.883a4.585 4.585 0 0 0 0-6.483v0Z"
+        />
+      </svg>
+    );
+  else if (myCl === "old_product_icon") {
     return (
       <svg
         onClick={() => {
@@ -29,7 +61,7 @@ const IconHeart = ({ myCl, setLike, like }) => {
         />
       </svg>
     );
-  else {
+  } else {
     return (
       <svg
         className={myCl}
