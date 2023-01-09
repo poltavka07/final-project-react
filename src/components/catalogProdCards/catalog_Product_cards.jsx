@@ -18,6 +18,7 @@ const CatalogProdCard = ({ value }) => {
           <img src={image} className="catProdCardsNav__img" alt={category} />
         </Link>
         <button
+          className="catProdCardsNav__btn"
           onClick={() => {
             toggleFavorites();
           }}
@@ -30,7 +31,7 @@ const CatalogProdCard = ({ value }) => {
         </button>
 
         <div className="catProdCardsNav__legend">
-          <Link className="catProdCardsNav__item" to="/ProductPage">
+          <Link className="catProdCardsNav__item" to={`/ProductPage/${id}`}>
             <h3 className="catProdCardsNav__title" title={title}>
               {title}
             </h3>

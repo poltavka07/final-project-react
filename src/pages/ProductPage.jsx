@@ -11,13 +11,17 @@ import Loader from "../components/loader/loader";
 import axios from "axios";
 import { IconHeart } from "../components/Header_icons";
 import { useIncludeInFavorites } from "../components/customHook";
-//import { useSelector } from "react-redux";
+import { cartAdd } from "../store/actions/cartActions";
+import { useDispatch } from "react-redux";
 
 const ProductPage = () => {
   const [loading, setLoading] = useState(true);
   const [productData, setProductData] = useState({});
   const { id } = useParams();
-  ////const favorites = useSelector((store) => store.favorites);
+  const [select, setSelect] = useState(); //select size
+  const [chosenColor, setColor] = useState("White/red patterned");
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setLoading(true);
@@ -52,10 +56,28 @@ const ProductPage = () => {
               price * 0.4
             ).toFixed(2)}`}</span>
           </div>
-          <ColorSelector />
-          <SizeSelector />
+          <ColorSelector setColor={setColor} chosenColor={chosenColor} />
+          <SizeSelector setSelect={setSelect} select={select} />
           <div className="prod_blockBtns">
-            <button className="prod__btn">Add to cart</button>
+            <button
+              className="prod__btn"
+              onClick={() => {
+                dispatch(
+                  cartAdd({
+                    ...productData,
+                    size: select
+                      ? select
+                      : "you didn't choose, the default size is M",
+                    color: chosenColor,
+                    costDelivery: 10,
+                    count: 1,
+                    itemId: new Date().getTime(),
+                  })
+                );
+              }}
+            >
+              Add to cart
+            </button>
             <button
               className="prod__btn_icn"
               onClick={() => {

@@ -21,11 +21,46 @@ h3 {
 }
 p,
 span,
-a {
+a,
+button,
+input {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+}
+
+.icnHov {
+  color: #e6e5e8;
+  &:hover {
+    cursor: pointer;
+    color: lightpink;
+  }
+}
+.icnHovBag {
+  padding-right: 10px;
+  color: inherit;
+}
+.icnCart {
+  color: #86858b;
+  &:hover {
+    color: black;
+  }
+}
+.icnBag {
+  position: relative;
+}
+.iconBagCount {
+  color: lightpink;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+.icnFooter {
+  color: #6e6d74;
+  &:hover {
+    color: lightpink;
+  }
 }
 
 .header {
@@ -158,18 +193,19 @@ a {
   right: 15px;
   top: 15px;
   fill: none;
-  stroke: #6e6d74;
+  color: #6e6d74;
   padding: 5px 4px 3px 4px;
   background-color: white;
   border-radius: 50%;
   width: 20px;
   height: 20px;
   &:hover {
+    color: #6e6d74;
     background-color: lightpink;
   }
   &_active {
     fill: #32313a;
-    stroke: #32313a;
+    color: #32313a;
   }
 
   // &_pageBtn {
@@ -275,6 +311,10 @@ footer {
     color: white;
     border: none;
     cursor: pointer;
+    &:hover {
+      background-color: lightpink;
+      color: #32313a;
+    }
   }
 }
 .copy {

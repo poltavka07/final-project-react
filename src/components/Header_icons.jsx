@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 //import { useState } from "react";
 const IconHeart = ({ myCl, setLike = "", like = "" }) => {
   if (
@@ -26,7 +27,7 @@ const IconHeart = ({ myCl, setLike = "", like = "" }) => {
       >
         <path
           // stroke="#E6E5E8"
-          // stroke="currentColor"
+          stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.6"
@@ -53,7 +54,7 @@ const IconHeart = ({ myCl, setLike = "", like = "" }) => {
       >
         <path
           // stroke="#E6E5E8"
-          // stroke="currentColor"
+          stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.6"
@@ -64,16 +65,16 @@ const IconHeart = ({ myCl, setLike = "", like = "" }) => {
   } else {
     return (
       <svg
-        className={myCl}
+        className={`${myCl} icnHov`}
         xmlns="http://www.w3.org/2000/svg"
         width="20"
         height="20"
         fill="none"
-        //fill="currentColor"
+        // fill="currentColor"
       >
         <path
           // stroke="#E6E5E8"
-          // stroke="currentColor"
+          stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="1.6"
@@ -87,14 +88,15 @@ const IconHeart = ({ myCl, setLike = "", like = "" }) => {
 const IconUser = () => {
   return (
     <svg
-      className="header_icon"
+      className="header_icon icnHov"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
       fill="none"
     >
       <path
-        stroke="#E6E5E8"
+        //stroke="#E6E5E8"
+        stroke="currentColor"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.6"
@@ -107,21 +109,23 @@ const IconUser = () => {
 const IconBag = () => {
   return (
     <svg
-      className="header_icon"
+      className="header_icon icnHov"
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
       fill="none"
     >
       <path
-        stroke="#E6E5E8"
+        stroke="currentColor"
+        // stroke="#E6E5E8"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.6"
         d="M5 1.667 2.5 5v11.667a1.666 1.666 0 0 0 1.667 1.666h11.666a1.666 1.666 0 0 0 1.667-1.666V5L15 1.667H5ZM2.5 5h15"
       />
       <path
-        stroke="#E6E5E8"
+        stroke="currentColor"
+        //stroke="#E6E5E8"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="1.6"
@@ -132,18 +136,33 @@ const IconBag = () => {
 };
 
 const Icons = () => {
-  //const [like, setLike] = useState(false);
-  return (
-    <>
-      <Link to="/FavoritePage">
-        <IconHeart myCl={"header_icon"} />
-      </Link>
-      <IconUser />
-      <Link to="/ShoppingBagPage">
-        <IconBag />
-      </Link>
-    </>
-  );
+  const shopingCart = useSelector((store) => store.cart);
+  if (shopingCart.length > 0) {
+    return (
+      <>
+        <Link to="/FavoritePage">
+          <IconHeart myCl={"header_icon"} />
+        </Link>
+        <IconUser />
+        <Link className="icnBag" to="/ShoppingBagPage">
+          <IconBag />
+          <div className="iconBagCount">{shopingCart.length}</div>
+        </Link>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Link to="/FavoritePage">
+          <IconHeart myCl={"header_icon"} />
+        </Link>
+        <IconUser />
+        <Link to="/ShoppingBagPage">
+          <IconBag />
+        </Link>
+      </>
+    );
+  }
 };
 
 export default Icons;

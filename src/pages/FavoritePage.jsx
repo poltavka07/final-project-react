@@ -2,6 +2,8 @@ import React from "react";
 import "../pages/pageStyles/favoritePage.scss";
 import { useSelector } from "react-redux";
 import CatalogProdCard from "../components/catalogProdCards/catalog_Product_cards";
+import heart from "../img/heart.webp";
+
 const FavoritePage = () => {
   const favorites = useSelector((store) => store.favorites);
 
@@ -23,7 +25,10 @@ const FavoritePage = () => {
   }
 
   return (
-    <h1 className="favPage__title">Your favorite products will be here</h1>
+    <>
+      <h1 className="favPage__title">Your favorite products will be here</h1>
+      <img src={heart} alt="heart" className="cart_img" />
+    </>
   );
 };
 

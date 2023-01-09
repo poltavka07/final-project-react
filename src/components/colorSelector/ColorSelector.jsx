@@ -1,9 +1,8 @@
 import React from "react";
 import "./colorSelector.scss";
-import { useState } from "react";
+//import { useState } from "react";
 
-const ColorSelector = () => {
-  const [chosenColor, setColor] = useState("White/red patterned");
+const ColorSelector = ({ chosenColor, setColor }) => {
   return (
     <>
       <div>

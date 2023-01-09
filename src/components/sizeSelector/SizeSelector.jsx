@@ -5,8 +5,7 @@ import { useState } from "react";
 
 import SizePopup from "./SizePopup";
 
-const SizeSelector = () => {
-  const [select, setSelect] = useState();
+const SizeSelector = ({ setSelect, select }) => {
   const [hidden, setHidden] = useState(true);
 
   const sizeGuides = [
