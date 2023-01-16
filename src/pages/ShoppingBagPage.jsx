@@ -1,5 +1,5 @@
 import React from "react";
-import "../pages/pageStyles/shoppingBagPage.scss";
+// import "../pages/pageStyles/shoppingBagPage.scss";
 import BrendBlock from "../components/BrendBlock";
 import product from "../components/product";
 import ProductsCards from "../components/Product_cards";
@@ -9,7 +9,7 @@ import { Trash } from "../components/icons";
 import { useSelector, useDispatch } from "react-redux";
 import { useState, useEffect } from "react";
 import { cartRemoveAll } from "../store/actions/cartActions";
-import emptyBag from "../img/emptyBag.webp";
+import emptyBag from "../img/emptyBag2.webp";
 
 const ShoppingBagPage = () => {
   const [subtotal, setSubtotal] = useState(0);
@@ -70,7 +70,7 @@ const ShoppingBagPage = () => {
           </div>
           <CartOrder subtotal={subtotal.sum} shippingSum={subtotal.delivSum} />
         </div>
-        <ProductsCards title={"You may also like"} data={product} a={2} b={9} />
+        <ProductsCards title={"You may also like"} data={product} a={0} b={8} />
         <BrendBlock />
       </>
     );

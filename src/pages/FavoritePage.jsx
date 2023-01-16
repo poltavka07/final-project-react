@@ -1,5 +1,5 @@
 import React from "react";
-import "../pages/pageStyles/favoritePage.scss";
+// import "../pages/pageStyles/favoritePage.scss";
 import { useSelector } from "react-redux";
 import CatalogProdCard from "../components/catalogProdCards/catalog_Product_cards";
 import heart from "../img/heart.webp";

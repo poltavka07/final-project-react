@@ -3,7 +3,7 @@ import React from "react";
 import { Dec, Inc, Cross } from "../icons";
 import { cartItemPatch, cartRemove } from "../../store/actions/cartActions";
 import { useDispatch } from "react-redux";
-
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const CartList = ({
@@ -15,13 +15,16 @@ const CartList = ({
   price,
   count: itemCount,
   itemId,
+  id,
 }) => {
   const [count, setCount] = useState(itemCount);
   const dispatch = useDispatch();
   return (
     <div className="cart_list">
       <div className="cart_list__block">
-        <img src={image} alt="prod" className="cart_list__img"></img>
+        <Link to={`/ProductPage/${id}`}>
+          <img src={image} alt="prod" className="cart_list__img"></img>
+        </Link>
         <div className="cart_list__text">
           <span className="cart_list__text_prodCategory">{category}</span>
           <span className="cart_list__text_prodTitle">{title}</span>

@@ -6,6 +6,14 @@ import prod5 from "../img/products/prod-5.webp";
 import prod6 from "../img/products/prod-6.webp";
 import prod7 from "../img/products/prod-7.webp";
 import prod8 from "../img/products/prod-8.webp";
+import prod9 from "../img/products/prod-9.webp";
+import prod10 from "../img/products/prod-10.webp";
+import prod11 from "../img/products/prod-11.webp";
+import prod12 from "../img/products/prod-12.webp";
+import prod13 from "../img/products/prod-13.webp";
+import prod14 from "../img/products/prod-14.webp";
+import prod15 from "../img/products/prod-15.webp";
+import prod16 from "../img/products/prod-16.webp";
 
 const product = [
   {
@@ -57,6 +65,56 @@ const product = [
     price: "$35.90",
     discont: true,
     oldprise: "$51.90",
+  },
+
+  {
+    src: prod9,
+    brand: "ASYOU",
+    describe: "Neoprene crop top",
+    price: "$9.90",
+  },
+  {
+    src: prod10,
+    brand: "Levi’s",
+    describe: "Cami dress",
+    price: "$14.90",
+  },
+  {
+    src: prod11,
+    brand: "Diesel",
+    describe: "Cropped jersey top",
+    price: "$26.90",
+  },
+  {
+    src: prod12,
+    brand: "ZARA",
+    describe: "Polo neck crop top",
+    price: "$32.90",
+  },
+  {
+    src: prod13,
+    brand: "Ted Baker",
+    describe: "Flare cami dress",
+    price: "$36.90",
+  },
+  {
+    src: prod14,
+    brand: "Missguided",
+    describe: "Puff sleeve floral maxi dress",
+    price: "$62.90",
+  },
+
+  {
+    src: prod15,
+    brand: "Massimo Dutti",
+    describe: "Double breasted jacket with gold buttons",
+    price: "$99.90",
+  },
+  {
+    src: prod16,
+    brand: "Motel",
+    describe: "Maxi slip dress with peplum hem",
+    price: "$48.90",
   },
 ];
 export default product;

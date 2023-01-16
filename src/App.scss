@@ -1,17 +1,10 @@
-//import bg from "./img/bg/girl_bg_pink.webp";
-
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap");
 
 * {
   padding: 0;
   margin: 0;
-
-  // font-family: "Open Sans", sans-serif;
-  // font-style: normal;
-  //font-weight: 400;
-  // font-size: 14px;
-  // box-sizing: border-box;
 }
+
 h1,
 h2,
 h3 {
@@ -51,11 +44,25 @@ input {
   position: relative;
 }
 .iconBagCount {
+  border: 2px solid #e6e5e8;
+  width: 35%;
+  height: 75%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1px;
   color: lightpink;
   position: absolute;
-  top: 0px;
+  top: 5px;
   right: 0px;
+  font-size: x-small;
+  font-weight: 600;
+  &:hover {
+    border-color: lightpink;
+  }
 }
+
 .icnFooter {
   color: #6e6d74;
   &:hover {
@@ -88,6 +95,9 @@ input {
   justify-content: space-between;
   align-items: center;
   width: 1110px;
+  &_end {
+    justify-content: flex-end;
+  }
 }
 
 .headerNav {
@@ -112,15 +122,40 @@ input {
 .promocode {
   display: flex;
   justify-content: center;
-  color: white;
   padding: 18px;
   background-color: #ed83a8;
   margin-bottom: 10px;
+  &__text {
+    font-weight: 800;
+    background: linear-gradient(
+      150deg,
+      rgb(160, 162, 163) 10%,
+      rgb(50, 49, 58) 20%,
+
+      rgb(220, 18, 139) 30%,
+      rgb(255, 255, 255) 40%
+    );
+    background-size: 25% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 5s linear infinite;
+  }
   &__link {
-    color: inherit;
     margin-left: 20px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(246, 244, 248);
     text-decoration: none;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
   }
 }
 
@@ -130,6 +165,39 @@ input {
   margin: auto;
   max-width: 1440px;
   min-height: 700px;
+}
+.heroNewIn {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 1110px;
+  position: relative;
+  padding-top: 20px;
+  &__img {
+    // width: 825px;
+    width: 75%;
+    min-height: 240px;
+  }
+  &__text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #1a1726;
+    &_title {
+      color: #32313a;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+}
+.page__title {
+  padding: 20px 0;
 }
 
 .catCardsNav {
@@ -148,6 +216,14 @@ input {
     color: white;
     background-color: #32313a;
     text-decoration: none;
+    transition: all, 0.5s;
+    box-shadow: 0 0px 0px hsla(190deg, 15%, 5%, 0.2);
+    &:hover {
+      transform: scale3d(1.2, 1.2, 0.3);
+      // rotate3d(1, 1, 1, 5deg);
+      transition: all, 0.5s;
+      box-shadow: 5px 5px 8px rgb(220, 18, 139);
+    }
   }
 }
 
@@ -207,10 +283,6 @@ input {
     fill: #32313a;
     color: #32313a;
   }
-
-  // &_pageBtn {
-  //   display: none;
-  // }
 
   &_pageIcn {
     position: unset;
@@ -321,6 +393,9 @@ footer {
   color: #86858b;
 }
 
+.sliderBtn {
+  margin-right: 20px;
+}
 .custom-arrow {
   background-color: #fff;
   border: none;
@@ -335,3 +410,13 @@ footer {
   position: fixed;
   display: none;
 }
+
+@import "./components/catalogProdCards/catalogProdCards.scss";
+@import "./components/colorSelector/colorSelector.scss";
+@import "./components/loader/loader.scss";
+@import "./components/search/search.scss";
+@import "./components/sizeSelector/sizeSelector.scss";
+@import "./components/StarRating/stars.scss";
+@import "./pages/pageStyles/favoritePage.scss";
+@import "./pages/pageStyles/productPage.scss";
+@import "./pages/pageStyles/shoppingBagPage.scss";

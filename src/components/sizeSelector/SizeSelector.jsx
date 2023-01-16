@@ -1,7 +1,6 @@
 import React from "react";
-import "./sizeSelector.scss";
+// import "./sizeSelector.scss";
 import { useState } from "react";
-//import { Link } from "react-router-dom";
 
 import SizePopup from "./SizePopup";
 

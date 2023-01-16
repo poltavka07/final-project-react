@@ -1,4 +1,5 @@
 import React from "react";
+import CartOffer from "./CartOffer";
 const CartOrder = ({ subtotal, shippingSum }) => {
   return (
     <div className="cart_order">
@@ -9,15 +10,10 @@ const CartOrder = ({ subtotal, shippingSum }) => {
       </div>
       <div className="cart_order__item">
         <span>Shipping</span>
-        <span>${shippingSum}</span>
+        {subtotal < 500 ? <span>${shippingSum}</span> : <span>FREE</span>}
       </div>
-      <div>
-        {/* компонент акции */}
-        <span className="cart_order__item_tiny">
-          Spend $50 more to get free shipping!
-        </span>
-      </div>
-      <form className="promo__form cart_order__item">
+      <CartOffer subtotal={subtotal} />
+      <div className="promo__form cart_order__item">
         <input
           className="promo__input"
           type="text"
@@ -25,11 +21,11 @@ const CartOrder = ({ subtotal, shippingSum }) => {
           height={"50px"}
         />
         <button className="promo__btn">Apply</button>
-      </form>
+      </div>
       <div className="cart_order__item item_border">
         <span className="cart_order__item_strong">Order total</span>
         <span className="cart_order__item_strong">
-          ${(subtotal + shippingSum).toFixed(2)}
+          ${subtotal < 500 ? (subtotal + shippingSum).toFixed(2) : subtotal}
         </span>
       </div>
 

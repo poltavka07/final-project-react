@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import StarRating from "../components/StarRating/Stars";
-import "../pages/pageStyles/productPage.scss";
+// import "../pages/pageStyles/productPage.scss";
 
 import ColorSelector from "../components/colorSelector/ColorSelector";
 import SizeSelector from "../components/sizeSelector/SizeSelector";
@@ -42,7 +42,7 @@ const ProductPage = () => {
     <Loader />
   ) : (
     <>
-      <h1 className="container">page product</h1>
+      {/* <h1 className="container">page product</h1> */}
       <div className="prod container">
         <img src={image} className="prod__img" alt={category} />
         <div className="prod__legend">
@@ -95,7 +95,7 @@ const ProductPage = () => {
           <p>{description}</p>
         </div>
       </div>
-      <ProductsCards title={"You may also like"} data={product} a={2} b={9} />
+      <ProductsCards title={"You may also like"} data={product} a={8} b={16} />
     </>
   );
 };

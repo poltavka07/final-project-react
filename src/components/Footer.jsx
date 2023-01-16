@@ -56,7 +56,6 @@ const SignUp = () => {
           className="signUp__input"
           type="email"
           placeholder="Enter your Email"
-          height={"50px"}
         />
         {/* <input type="button">Subscribe</input> */}
         <button className="signUp__btn">Subscribe</button>

@@ -2,7 +2,7 @@ import React from "react";
 const Logo = ({ myCl }) => {
   return (
     <svg
-      className={myCl}
+      className={`${myCl} icnHov`}
       xmlns="http://www.w3.org/2000/svg"
       width="164"
       height="16"

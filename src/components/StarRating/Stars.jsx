@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./stars.scss";
+// import "./stars.scss";
 
 const Star = ({ active, id, setRate, setHover, activeLight }) => {
   return (
@@ -13,9 +13,6 @@ const Star = ({ active, id, setRate, setHover, activeLight }) => {
       onMouseLeave={() => {
         setHover();
       }}
-      // onDoubleClick={() => {
-      //   setRate();
-      // }}
       style={{
         cursor: "pointer",
         padding: "1px",

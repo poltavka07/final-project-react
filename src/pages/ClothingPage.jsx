@@ -44,28 +44,28 @@ const ClothingPage = () => {
   return (
     <>
       <div className="miniProd_close">
-        <div>
-          <h2 className="container">
-            Clothing Page
-            <div className="sliderBtn">
-              <button
-                ref={leftArrowCallbackRef}
-                type="button"
-                aria-label="Previous"
-                className="custom-arrow"
-              >
-                {<Prev />}
-              </button>
-              <button
-                ref={rightArrowCallbackRef}
-                type="button"
-                aria-label="Next"
-                className="custom-arrow"
-              >
-                {<Next />}
-              </button>
-            </div>
-          </h2>
+        <div className="container container_end">
+          {/* <h2 className="container"> */}
+
+          <div className="sliderBtn">
+            <button
+              ref={leftArrowCallbackRef}
+              type="button"
+              aria-label="Previous"
+              className="custom-arrow"
+            >
+              {<Prev />}
+            </button>
+            <button
+              ref={rightArrowCallbackRef}
+              type="button"
+              aria-label="Next"
+              className="custom-arrow"
+            >
+              {<Next />}
+            </button>
+          </div>
+          {/* </h2> */}
         </div>
 
         <div className="prodCardsNav container catalog">

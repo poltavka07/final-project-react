@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IconHeart } from "../Header_icons";
-import "../catalogProdCards/catalogProdCards.scss";
+// import "../catalogProdCards/catalogProdCards.scss";
 import { useIncludeInFavorites } from "../customHook";
 
 const CatalogProdCard = ({ value }) => {

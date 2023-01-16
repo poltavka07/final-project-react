@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./search.scss";
+// import "./search.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -60,7 +60,7 @@ const HeaderSearch = () => {
         value={searchInput}
       />
       {!!searchResult.length && (
-        <div className="headerNav__search__res">
+        <div className="headerNav__search__res" onMouseLeave={closeSearch}>
           {searchResult.map(({ title, id }, index) => {
             return !!id ? (
               <Link

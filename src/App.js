@@ -5,16 +5,11 @@ import Header from "./components/Header";
 import MainPage from "./pages/MainPage";
 import NewInPage from "./pages/NewInPage";
 import CategoryPage from "./pages/CategoryPage";
-//import SearchPage from "./pages/SearchPage";
 import ShoppingBagPage from "./pages/ShoppingBagPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductPage from "./pages/ProductPage";
 import ClothingPage from "./pages/ClothingPage";
 import FavoritePage from "./pages/FavoritePage";
-// import HeaderNav from "./components/Header_Nav";
-//import HeaderSearch from "./components/Header_search";
-// import Promocode from "./components/Promocode";
-// import CategoriesCards from "./components/Categories_cards";
 
 function App() {
   return (

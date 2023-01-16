@@ -1,4 +1,4 @@
-import "./loader.scss";
+//import "./loader.scss";
 const Loader = () => {
   return (
     <div className="loadingio-spinner-disk-jam5axkfhnc">

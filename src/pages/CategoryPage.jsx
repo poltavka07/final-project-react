@@ -1,12 +1,13 @@
 const CategoryPage = () => {
   return (
-    <div>
-      <h1>Category</h1>
-      <p>
-        This page category
-        <a href="/">Home</a>
-      </p>
-    </div>
+    <>
+      <div className="container">
+        <h1>here will be a page of categories</h1>
+      </div>
+      <a className="container" href="/">
+        Home
+      </a>
+    </>
   );
 };
 export default CategoryPage;
